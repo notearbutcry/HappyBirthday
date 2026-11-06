@@ -1,0 +1,16 @@
+/* The original illustration occupies layout and remains the no-WebGL fallback. */
+#cake-stage{perspective:900px;isolation:isolate}
+#cake-3d{display:none;position:absolute;inset:-9% -10%;width:120%;height:118%;z-index:3;touch-action:none;cursor:grab;outline:none}
+#cake-3d:active{cursor:grabbing}
+#cake-3d:focus-visible{outline:1px solid #dfbd8155;outline-offset:-12px}
+.has-3d-cake #cake-3d{display:block}
+.has-3d-cake>.birthday-cake{visibility:hidden}
+.has-3d-cake .candle-aura{z-index:0;top:0;width:70%;height:75%;background:radial-gradient(ellipse,#e7a24f0d,transparent 65%)}
+.has-3d-cake .cake-spark{opacity:.45;z-index:0}
+.camera-controls{display:flex;align-items:center;justify-content:center;gap:7px;margin:0 auto 12px;position:relative;z-index:4}
+.camera-controls button{border:1px solid #ddbf8e33;background:#080707d9;color:#dfc4a0;border-radius:30px;padding:7px 13px;font:10px var(--sans);letter-spacing:.5px;cursor:pointer;transition:background .2s,border-color .2s}
+.camera-controls button:hover{background:#1b1510;border-color:#ddbf8e77}
+.camera-controls button:disabled{opacity:.35;cursor:default}
+.camera-hint{text-align:center;font-size:8px;letter-spacing:1px;color:#9b8581;display:block;margin:2px 0 12px}
+@media(max-width:700px){#cake-3d{inset:-12% -9%;width:118%;height:122%}.camera-controls{margin-bottom:9px;gap:6px}.camera-controls button{font-size:9px;padding:6px 11px}.camera-hint{font-size:7px;margin-bottom:9px}}
+@media(prefers-reduced-motion:reduce){.camera-controls button{transition:none}}

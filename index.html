@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#151423">
+  <meta name="description" content="送给雨天的二十岁：一封来自狸的信，一个愿望，和一整片为你绽放的烟花。">
+  <title>雨天，20 岁生日快乐 · Dear 狸</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="experience.css">
+  <link rel="stylesheet" href="cake3d.css">
+  <link rel="stylesheet" href="cinema.css">
+  <script src="cake3d.js" defer></script>
+  <script src="fireworks.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-scene="wish">
+  <div class="night-sky" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <canvas id="fireworks-canvas" aria-hidden="true"></canvas>
+  <div class="transition-veil" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#/wish" aria-label="回到许愿页"><span class="wordmark-star">✳</span> 给雨天 <span class="wordmark-divider"></span><small>TWENTY</small></a>
+    <span class="header-dedication">FOR YOU, ALWAYS</span>
+  </header>
+
+  <main id="stage">
+    <section class="scene wish-entry-scene" id="scene-wish" aria-labelledby="entry-title" tabindex="-1">
+      <div class="wish-entry-layout">
+        <div class="wish-intro">
+          <p class="eyebrow"><span></span> A SKY FULL OF WISHES · FOR 雨天</p>
+          <div class="entry-age" aria-hidden="true">20<span>✦</span></div>
+          <h1 id="entry-title">雨天，<br>把愿望写给<span>星空。</span></h1>
+          <p class="scene-description">新的一岁，从一个小小的愿望开始。<br>今晚的每一束光，都为你而来。</p>
+          <a class="text-button light-text letter-shortcut" href="#/letter/1">先读一读狸写给你的信 <span aria-hidden="true">↗</span></a>
+        </div>
+        <form class="wish-form" id="wish-form">
+          <div class="wish-card-heading"><span class="wish-card-star" aria-hidden="true">✧</span><span>MAKE A WISH<small>属于你的二十岁</small></span><span class="wish-card-number">01</span></div>
+          <label for="wish-input">你的愿望是什么？</label>
+          <textarea id="wish-input" name="wish" rows="4" maxlength="120" placeholder="希望新的一岁……" required aria-describedby="wish-count wish-error" spellcheck="false"></textarea>
+          <div class="wish-input-footer"><span>让星星，替你记住这一刻。</span><span id="wish-count">0 / 120</span></div>
+          <p class="wish-error" id="wish-error" role="status"></p>
+          <button class="button button-gold" id="submit-wish" type="submit">许好愿了，去吹蜡烛 <span aria-hidden="true">→</span></button>
+          <p class="wish-card-bottom">写下愿望 <i>·</i> 吹灭蜡烛 <i>·</i> 看一场属于你的烟花</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="scene letter-scene" id="scene-letter" aria-labelledby="letter-title" tabindex="-1" hidden>
+      <div class="letter-layout">
+        <aside class="letter-aside">
+          <p class="eyebrow">04 / WORDS FROM THE HEART</p>
+          <h2 id="letter-title">从十四岁，<br>到更多的以后。</h2>
+          <p class="scene-description">时间走得好快。<br>幸好，我们还有很长的未来。</p>
+          <div class="memory-line" aria-hidden="true"><span>14<small>初次见面</small></span><i></i><span>20<small>此刻的你</small></span><i></i><span>∞<small>以后的我们</small></span></div>
+          <span class="handwritten">For all the days to come.</span>
+        </aside>
+        <article class="letter-paper" aria-label="狸写给雨天的信">
+          <div class="paper-header"><span>DEAR 雨天</span><span class="paper-star" aria-hidden="true">✳</span></div>
+          <div class="letter-pages" aria-live="polite">
+            <div class="letter-page" data-letter="1">
+              <p class="letter-original">雨天，20岁生日快乐！是不是感觉很快？还没准备好进入20岁？我也是！不过我今年19😃好快啊，我们认识的时候才14岁，五年，马上六年了，感觉这么多年，你好像没变哦，至少对我没变，一直这么好，</p>
+            </div>
+            <div class="letter-page" data-letter="2" hidden>
+              <p class="letter-original">我还是记得高中的时候还帮我记政治笔记，借书给我，还有那个三明治，那个三明治在我的16岁我不知道是处于一个什么位置，那个时候没人在意我怎么样，家人，老师，同学，除了你，意外，惊喜，</p>
+            </div>
+            <div class="letter-page" data-letter="3" hidden>
+              <p class="letter-original">每每想到那天，就好像在往后的一生中刻舟求剑，对于我来说意义不止于一个三明治而已。一滴泪的重量取决于落进谁的心里，那个三明治也是。</p>
+            </div>
+            <div class="letter-page" data-letter="4" hidden>
+              <p class="letter-original">四年过去了，我还是记得很清楚，对了，洪瑞珍的三明治很好吃，我下次出去玩给你带，好伤感哦，今天明明是你的生日，但我有时候就是这样，话说出来也没个门了。</p>
+            </div>
+            <div class="letter-page" data-letter="5" hidden>
+              <p class="letter-original">下次我去南昌找你玩呀☺️最最最最最重要的事：今天你在广丰，广丰应该没有特别冷吧，虽然最近都在降温，但还是要注意保暖，不知道生日礼物你会不会喜欢呢。</p>
+            </div>
+            <div class="letter-page letter-ending" data-letter="6" hidden>
+              <p class="letter-original">希望你往后拥有吃不完的螺狮粉，良好的睡眠，想要的生活。生日快乐🎈</p>
+              <p class="letter-original">祝你早安，午安，晚安。</p>
+              <p class="letter-signature">Dear 狸</p>
+            </div>
+          </div>
+          <div class="paper-footer">
+            <button class="text-button paper-back" id="letter-prev" disabled aria-label="上一页信">← <span>上一页</span></button>
+            <span class="paper-pagination"><b id="letter-page-number">01</b> / 06</span>
+            <button class="text-button paper-next" id="letter-next">下一页 <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="scene wish-scene candle-scene" id="scene-candle" aria-labelledby="candle-title" tabindex="-1" hidden>
+      <div class="wish-content">
+        <p class="eyebrow">02 / A WISH BEFORE THE MAGIC</p>
+        <h2 id="candle-title">轻轻一吹，愿望起飞。</h2>
+        <p class="scene-description">靠近一点，这是专属于你的二十岁。</p>
+        <div class="cake-stage" id="cake-stage">
+          <canvas id="cake-3d" aria-label="可转动和拉近拉远的二十岁生日蛋糕" role="img"></canvas>
+          <div class="candle-aura"></div><div class="wind-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+          <span class="cake-spark spark-left" aria-hidden="true">✧</span><span class="cake-spark spark-right" aria-hidden="true">✦</span>
+          <svg class="birthday-cake" viewBox="0 0 500 360" role="img" aria-label="插着数字20蜡烛的生日蛋糕">
+            <defs>
+              <linearGradient id="cake-side" x1="0" x2="1"><stop stop-color="#cda299"/><stop offset=".35" stop-color="#f1d9c5"/><stop offset=".7" stop-color="#edceba"/><stop offset="1" stop-color="#ba8984"/></linearGradient>
+              <linearGradient id="candle-color" x1="0" x2="1"><stop stop-color="#d59a78"/><stop offset=".5" stop-color="#ffdfaa"/><stop offset="1" stop-color="#bf805f"/></linearGradient>
+              <radialGradient id="cake-shadow"><stop stop-color="#dbaa8c" stop-opacity=".15"/><stop offset="1" stop-color="#dbaa8c" stop-opacity="0"/></radialGradient>
+              <radialGradient id="flame-color" cx=".5" cy=".8"><stop stop-color="#fff9d8"/><stop offset=".4" stop-color="#ffe39d"/><stop offset="1" stop-color="#d89155"/></radialGradient>
+            </defs>
+            <ellipse cx="250" cy="300" rx="230" ry="50" fill="url(#cake-shadow)"/>
+            <ellipse cx="250" cy="291" rx="184" ry="35" fill="#8a737a"/>
+            <ellipse cx="250" cy="283" rx="184" ry="35" fill="#ded0be"/>
+            <ellipse cx="250" cy="278" rx="169" ry="29" fill="#f1e5cf"/>
+            <path d="M100 178v77c0 54 300 54 300 0v-77Z" fill="url(#cake-side)"/>
+            <g stroke="#c6978e" stroke-width="2" opacity=".35"><path d="M120 203v62M143 215v60M167 222v59M193 228v59M222 232v59M250 232v60M278 232v59M307 228v59M333 222v59M357 215v60M380 203v62"/></g>
+            <path d="M100 178v26q10 24 22 0q9-13 20 13q12 34 24 4q11-15 24 12q11 30 25 0q11-18 23 4q12 28 24-1q12-20 26 0q15 27 28-6q11-22 24 0q13 12 24-25q12-20 22-3q9 12 14-24Z" fill="#f6e4cf"/>
+            <ellipse cx="250" cy="178" rx="150" ry="46" fill="#fff0d9"/>
+            <ellipse cx="250" cy="176" rx="134" ry="35" fill="none" stroke="#e8d0b9" stroke-width="1.5"/>
+            <g fill="#fff4e0"><circle cx="108" cy="179" r="10"/><circle cx="118" cy="162" r="10"/><circle cx="140" cy="150" r="10"/><circle cx="168" cy="140" r="10"/><circle cx="200" cy="135" r="10"/><circle cx="234" cy="132" r="10"/><circle cx="268" cy="133" r="10"/><circle cx="302" cy="137" r="10"/><circle cx="334" cy="144" r="10"/><circle cx="363" cy="155" r="10"/><circle cx="385" cy="168" r="10"/><circle cx="392" cy="183" r="10"/></g>
+            <g fill="#b97483"><path d="M144 186c-14-14 5-21 8-10c6-10 23-3 8 10l-8 7Z"/><path d="M341 184c-14-14 5-21 8-10c6-10 23-3 8 10l-8 7Z"/></g>
+            <text x="250" y="263" text-anchor="middle" fill="#a97170" font-size="20" font-family="Georgia,serif" font-style="italic" letter-spacing="2">for you, always</text>
+            <path d="M205 152v23M286 152v23" stroke="#a17c61" stroke-width="4"/>
+            <g fill="none" stroke="url(#candle-color)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"><path d="M180 92c0-35 56-35 56 0c0 21-53 32-53 60h56"/><path d="M262 93c0-33 50-33 50 0v35c0 34-50 34-50 0Z"/></g>
+            <path d="M205 64v-11M286 64v-11" stroke="#5b4142" stroke-width="2.5"/>
+            <g class="candle-flames" fill="url(#flame-color)"><path class="flame flame-one" d="M205 54c-20-9-7-27 2-40c-3 18 19 31-2 40Z"/><path class="flame flame-two" d="M286 54c-20-9-7-27 2-40c-3 18 19 31-2 40Z"/></g>
+            <g class="candle-smoke" fill="none" stroke="#e9d2bf" stroke-width="3" stroke-linecap="round"><path d="M205 52c-18-14 17-22 0-39"/><path d="M286 52c-18-14 17-22 0-39"/></g>
+          </svg>
+        </div>
+        <div class="camera-controls" aria-label="蛋糕视角"><button id="camera-out" type="button" aria-label="拉远视角">−</button><span id="camera-hint">拖动转动 · 拉近看看</span><button id="camera-in" type="button" aria-label="拉近视角">＋</button></div>
+        <div class="saved-wish"><span>我的愿望</span><p id="saved-wish-text"></p><a href="#/wish" aria-label="修改我的愿望">修改 ↗</a></div>
+        <p class="wish-status" id="wish-status" aria-live="polite">准备好了吗？吹灭烛光，让烟花替你绽放。</p>
+        <button class="button button-gold blow-button" id="blow-candles"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8h13c6 0 6-7 2-7M2 12h18M2 16h10c6 0 6 7 2 7"/></svg><span>吹灭蜡烛，点亮夜空</span></button>
+        <button class="mic-button" id="mic-blow" type="button" aria-pressed="false">也可以用麦克风，真的吹一下 ↗</button>
+        <div class="breath-meter" id="breath-meter" hidden aria-hidden="true"><i></i></div>
+      </div>
+    </section>
+
+    <section class="scene fireworks-scene" id="scene-fireworks" aria-labelledby="fireworks-title" tabindex="-1" hidden>
+      <button id="sky-touch" class="sky-touch" tabindex="-1" aria-hidden="true"></button>
+      <div class="finale-content">
+        <p class="eyebrow">TONIGHT, THE WHOLE SKY IS YOURS</p>
+        <div class="finale-age" aria-hidden="true">20<span>✦</span></div>
+        <h2 id="fireworks-title">生日快乐，雨天。</h2>
+        <p class="finale-message">愿你拥有，想要的生活。</p>
+        <div class="finale-rule" aria-hidden="true"><i></i> ✧ <i></i></div>
+        <p class="finale-signature">Dear 狸</p>
+      </div>
+      <div class="finale-controls">
+        <p id="fireworks-hint">这整片烟花，都送给你。<span>点击夜空，还可以再放一束。</span></p>
+        <div class="finale-buttons"><button class="button button-outline" id="more-fireworks">再放一场烟花 <span aria-hidden="true">✧</span></button><a class="text-button light-text" href="#/letter/1">读狸写给你的信 ↗</a></div>
+        <button class="motion-toggle" id="motion-toggle" aria-pressed="true">暂停烟花动画</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="footer-caption">A BIRTHDAY STORY · BY 狸</span>
+    <nav class="chapter-nav" aria-label="生日故事章节">
+      <a href="#/wish" data-chapter="wish" aria-current="page"><span>01</span> 许愿</a><i></i>
+      <a href="#/candle" data-chapter="candle"><span>02</span> 烛光</a><i></i>
+      <a href="#/fireworks" data-chapter="fireworks" aria-disabled="true" tabindex="-1"><span>03</span> 烟花</a><i></i>
+      <a href="#/letter/1" data-chapter="letter"><span>04</span> 来信</a>
+    </nav>
+    <span class="footer-page" id="footer-page">01 — 04</span>
+  </footer>
+  <noscript><div class="no-script">雨天，20岁生日快乐。<br>请启用 JavaScript，拆开狸的信和生日惊喜。</div></noscript>
+</body>
+</html>
